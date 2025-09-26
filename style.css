@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    padding: 30px 40px;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    color: var(--text-color);
+    text-align: center;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+#video-lists{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border: 1px solid var(--bg-color);
+    border-radius: 12px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.video:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.video p{
+    font-size: 16px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+    margin-right: 12px;
+}
+
+
+
+.video button{
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.video button:hover {
+    background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+    color: var(--bg-color);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    .box {
+        padding: 16px 8px;
+        max-width: 98vw;
+        border-radius: 12px;
+    }
+    #video-lists {
+        gap: 8px;
+    }
+    .video {
+        padding: 8px 6px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    .video p {
+        font-size: 13px;
+        margin-right: 6px;
+    }
+    .video button {
+        font-size: 14px;
+        padding: 5px 8px;
+        border-radius: 4px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+/* Removed stray closing brace causing error */
