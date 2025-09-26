@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const videoList = [
         {
-            name: "FF best 20 headshot",
+            name: "FF best headshot",
             url: "https://drive.google.com/file/d/1uDW9vARHMEhyDZ37x34yEpDmtZpop9F-/view?usp=drive_link"
         }
     ];
